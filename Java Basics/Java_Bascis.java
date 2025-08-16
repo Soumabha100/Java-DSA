@@ -92,6 +92,39 @@ public class Java_Bascis {
         System.out.println("The Binary of " + myNum + " is " + binNum);
     }
 
+    /*The sum of 3 Numbers */
+    public static int sum (int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static boolean isEven (int n) {
+        if (n % 2 == 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isPalindrome (int num) {
+        int rev_num = 0;
+        int ogNum = num;
+
+        while (num > 0) {
+            int lastDigit = num % 10;
+
+            rev_num = (rev_num * 10) + lastDigit ;
+
+            num /= 10;
+        }
+
+        if (ogNum == rev_num) {
+            return true;
+        }
+
+        return false;
+
+    }
+
     public static void main(String args[]) {
 
         Scanner Scn = new Scanner(System.in);
@@ -104,8 +137,16 @@ public class Java_Bascis {
         // System.out.println(isPrime(7));
         // inRangeIsPrime(29);
 
-        toDecimal(100101);
-        toBinary(15);
+        // toDecimal(100101);
+        // toBinary(15);
+
+        // int a = 5, b = 8, c = 12;
+
+        // System.out.println("The sum is : " + sum(a, b, c));
+
+        // System.out.println(isEven(44));
+
+        System.out.println(isPalindrome(1221));
 
         Scn.close();
     }
