@@ -39,3 +39,6 @@
 *.ipr
 *.iws
 .idea/
+
+# Code Runner temporary file
+tempCodeRunnerFile.java
