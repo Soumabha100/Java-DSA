@@ -58,6 +58,40 @@ public class Java_Bascis {
         }
     }
 
+    public static void toDecimal (int binNum) {
+
+        int myNum = binNum;
+        int pow = 0;
+        int decNum = 0;
+
+        while (binNum > 0) {
+            int lastDigit = binNum % 10;
+            decNum = decNum + (lastDigit * (int)Math.pow(2, pow));
+
+            pow++;
+            binNum /= 10;
+        }
+
+        System.out.println("The Decimal of " + myNum + " is " + decNum);
+    }
+
+    public static void toBinary (int decNum) {
+        int myNum = decNum;
+        int pow = 0;
+        int binNum = 0;
+
+        while (decNum > 0) {
+            int lastDigit = decNum % 2;
+
+            binNum = binNum + (lastDigit * (int)Math.pow(10, pow));
+
+            pow++;
+            decNum /= 2;
+        }
+
+        System.out.println("The Binary of " + myNum + " is " + binNum);
+    }
+
     public static void main(String args[]) {
 
         Scanner Scn = new Scanner(System.in);
@@ -68,7 +102,10 @@ public class Java_Bascis {
         // int f = Factorial(n);
 
         // System.out.println(isPrime(7));
-        inRangeIsPrime(29);
+        // inRangeIsPrime(29);
+
+        toDecimal(100101);
+        toBinary(15);
 
         Scn.close();
     }
