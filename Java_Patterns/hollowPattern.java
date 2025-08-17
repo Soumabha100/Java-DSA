@@ -147,6 +147,50 @@ public class hollowPattern {
         }
     }
 
+    public static void rhombusSolid (int rows) {
+
+        /* Outer loop -> Rows */
+        for (int i = 1; i <= rows; i++) {
+            
+            /* Inner loop -> Spaces */
+            for (int j = 1; j <= (rows - i); j++) {
+                System.out.print("  ");
+            }
+
+            /* Stars */
+            for (int j = 1; j <= rows; j++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static void rhombusHollow (int rows) {
+
+        /* Outer loop -> Rows */
+        for (int i = 1; i <= rows; i++) {
+            
+            /* Spaces */
+            for (int j = 1; j <= (rows - i); j++) {
+                
+                System.out.print("  ");
+            }
+
+            /* Hollow Rectangle */
+            for (int j = 1; j <= rows; j++) {
+                if (i == 1 || i == rows || j == 1 || j == rows) {
+                    System.out.print("* ");
+                }
+                else {
+                    System.out.print("  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
 
     public static void main(String args[]) {
 
@@ -155,7 +199,9 @@ public class hollowPattern {
         // numbersHalfPyramidPattern(5);
         // floydsTriangle(5);
         // zeroOneTrianglePattern(5);
-        butterFly(4);
+        // butterFly(4);
+        // rhombusSolid(5);
+        rhombusHollow(5);
 
     }
 
