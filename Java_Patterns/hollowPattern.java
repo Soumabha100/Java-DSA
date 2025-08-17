@@ -43,6 +43,8 @@ public class hollowPattern {
         }
     }
 
+    /* Half Pyramid Pattern with Numbers */
+
     public static void numbersHalfPyramidPattern (int rows) {
 
         /* Outer Loop -> Rows */
@@ -56,6 +58,8 @@ public class hollowPattern {
             System.out.println();
         }
     }
+
+    /* Floyds Triangle */
 
     public static void floydsTriangle (int rows) {
 
@@ -72,6 +76,8 @@ public class hollowPattern {
             System.out.println();
         }
     }
+
+    /* 0 1 Triangle Pattern */
 
     public static void zeroOneTrianglePattern (int rows) {
 
@@ -93,6 +99,54 @@ public class hollowPattern {
         }
     }
 
+    public static void butterFly (int rows) {
+        /*
+        Upper Half
+         Outer loop -> Rows */
+        for (int i = 1; i <= rows; i++) {
+
+            /* Stars */
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+
+            /* Spaces */
+            for (int j = 1; j <= 2 * (rows - i); j++) {
+                System.out.print("  ");
+            }
+
+            /* Stars */
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+        /*
+        Lower Half (Mirror)
+         Outer loop -> Rows */
+        for (int i = rows; i >= 1; i--) {
+
+            /* Stars */
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+
+            /* Spaces */
+            for (int j = 1; j <= 2 * (rows - i); j++) {
+                System.out.print("  ");
+            }
+
+            /* Stars */
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+
 
     public static void main(String args[]) {
 
@@ -100,7 +154,8 @@ public class hollowPattern {
         // invertedHalfPyramidPattern(4);
         // numbersHalfPyramidPattern(5);
         // floydsTriangle(5);
-        zeroOneTrianglePattern(5);
+        // zeroOneTrianglePattern(5);
+        butterFly(4);
 
     }
 
