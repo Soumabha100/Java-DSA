@@ -93,8 +93,8 @@ public class Java_Bascis {
     }
 
     /*The sum of 3 Numbers */
-    public static int sum (int a, int b, int c) {
-        return a + b + c;
+    public static int avg (int a, int b, int c) {
+        return (a + b + c)/ 3;
     }
 
     public static boolean isEven (int n) {
@@ -125,6 +125,20 @@ public class Java_Bascis {
 
     }
 
+    public static int sumOfDigits (int num) {
+        int sum = 0;
+
+        while (num > 0) {
+            int lastDigit = num % 10;
+
+            sum = sum + lastDigit;
+
+            num /= 10;
+        }
+
+        return sum;
+    }
+
     public static void main(String args[]) {
 
         Scanner Scn = new Scanner(System.in);
@@ -142,11 +156,12 @@ public class Java_Bascis {
 
         // int a = 5, b = 8, c = 12;
 
-        // System.out.println("The sum is : " + sum(a, b, c));
+        // System.out.println("The avg is : " + avg(a, b, c));
 
         // System.out.println(isEven(44));
 
-        System.out.println(isPalindrome(1221));
+        // System.out.println(isPalindrome(1221));
+        // System.out.println(sumOfDigits(999));
 
         Scn.close();
     }
