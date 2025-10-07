@@ -16,7 +16,7 @@ public class Arrays {
     public static void main(String args[]) {
 
         int numbers[] = { 2, 4, 5, 8, 12, 14, 19, 21, 29 };
-        int key = 99;
+        int key = 8;
 
         int index = LinearSearch(numbers, key);
 
