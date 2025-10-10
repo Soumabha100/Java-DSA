@@ -2,6 +2,42 @@
 import java.util.*;
 public class MaxSubArray {
 
+    public static void Kadanes (int numbers []) {
+        int currentSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        int negativeCount = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                negativeCount ++;
+            }
+        }
+
+        if (negativeCount == numbers.length) {
+            for (int i = 0; i < numbers.length; i++) {
+                currentSum = Math.max(numbers[i], currentSum + numbers[i]);
+                maxSum = Math.max(maxSum, currentSum);
+                
+            }
+        } else {
+
+            for (int i = 0; i < numbers.length; i++) {
+            currentSum = currentSum + numbers[i];
+
+            if (currentSum < 0) {
+                currentSum = 0;
+            }
+
+            maxSum = Math.max(maxSum, currentSum);
+        }
+        
+            
+        }
+        
+
+        System.out.println("The Max Sum of the SubArray is " + maxSum);
+    }
+
     public static void preFixmaxSubArray(int numbers[]) {
 
         int currentSum = 0;
@@ -60,9 +96,14 @@ public class MaxSubArray {
 
         int numbers[] = { 2, 4, 6, 8, 10 };
         int numbers2[] = {1,-2,6,-1,3};
+        int numbers3[] = {-2,-3,4,-1,-2,1,5,-3};
+        int numbers4[] = {-2,-3,-5,-6,-2,-1};
 
         // maxSubArray(numbers2);
-        preFixmaxSubArray(numbers2);
+        // preFixmaxSubArray(numbers2);
+        // Kadanes(numbers3);
+        Kadanes(numbers3);
+
 
     }
     
