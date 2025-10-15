@@ -19,8 +19,9 @@ public class BuySellStocks {
 
     public static void main(String args[]) {
         int price[] = { 7, 1, 5, 3, 6 };
+        int price2[] = { 7, 6, 4, 3, 1 };
 
-        int profit = Stocks(price);
+        int profit = Stocks(price2);
 
         System.out.println("The max Profit that is possible is " + profit);
 
