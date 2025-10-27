@@ -39,7 +39,7 @@ public class TrappingRainWater {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         int height[] = { 4, 2, 0, 6, 3, 2, 5 };
         int height2[] = { -1, -2, -3, -4, -5, -6 };
         int h3[] = { 1, 2, 3, 4, 5, 6, 7, 8, 4, 4, 2, 8 };
