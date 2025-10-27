@@ -49,6 +49,10 @@ public class TrappingRainWater {
 
         int result = TrappedRainWater(h6);
 
+        for (int i = 0; i < h6.length; i++) {
+            System.out.print(h6[i] + " ");
+        }
+
         System.out.println("The trapped water is " + result);
     }
 }
