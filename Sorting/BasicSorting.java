@@ -55,7 +55,30 @@ public class BasicSorting {
         }
     }
 
-    public static void printArr(Integer arr[]) {
+    public static void countSort(int arr[]) {
+        int largestNumber = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            largestNumber = Math.max(largestNumber, arr[i]);
+        }
+
+        int countArray[] = new int[largestNumber + 1];
+        for (int i = 0; i < arr.length; i++) {
+            countArray[arr[i]]++;
+        }
+
+        // Sorting
+        int countIndex = 0;
+        for (int i = 0; i < countArray.length; i++) {
+            while (countArray[i] > 0) {
+                arr[countIndex] = i;
+                countIndex++;
+                countArray[i]--;
+            }
+        }
+    }
+
+    public static void printArr(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
@@ -64,12 +87,12 @@ public class BasicSorting {
 
     public static void main(String args[]) {
 
-        Integer arr[] = { 5, 4, 1, 3, 2 };
+        int arr[] = { 1, 4, 1, 3, 2, 4, 3, 7 };
 
         // bubbleSort(arr);
         // selectionSort(arr);
         // insertionSort(arr);
-        Arrays.sort(arr, Collections.reverseOrder());
+        countSort(arr);
         printArr(arr);
     }
 
